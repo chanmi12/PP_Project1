@@ -23,6 +23,7 @@ public class manager {
         return keyboard.nextInt();
     }
     public void start() {
+        wordCRUD.loadFile();
         while (true) {
             int menu = selectMenu();
             if (menu == 0) break;
@@ -39,10 +40,9 @@ public class manager {
                 wordCRUD.addWord();
             }
             else if(menu == 5){
-
+                wordCRUD.update();
             }
             else if(menu == 6){
-
             }
             else if(menu == 7){
                 wordCRUD.saveFile();

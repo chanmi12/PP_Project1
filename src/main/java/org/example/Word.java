@@ -1,12 +1,19 @@
 package org.example;
 
 public class Word {
+    private int id;
     private int level;
     private String word;
     private String mean;
 
     Word(){}
     Word(int level, String word, String mean){
+        this.level = level;
+        this.word = word;
+        this.mean = mean;
+    }
+    Word(int id, int level, String word, String mean){
+        this.id = id;
         this.level = level;
         this.word = word;
         this.mean = mean;
