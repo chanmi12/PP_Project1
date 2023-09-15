@@ -45,7 +45,7 @@ public class manager {
 
             }
             else if(menu == 7){
-
+                wordCRUD.saveFile();
             }
         }
     }
