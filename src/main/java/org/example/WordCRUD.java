@@ -80,7 +80,21 @@ public class WordCRUD implements ICRUD{
         word.setMean(mean);
         System.out.println("단어가 수정되없습니다.");
     }
-
+    public void deleteWord(){
+        System.out.print("=> 삭제할 단어 검색: ");
+        String keyword = keyboard.next();
+        ArrayList<Integer> idlist = this.listAll(keyword);
+        System.out.print("=> 삭제할 번호 선택 :");
+        int id = keyboard.nextInt();
+        keyboard.nextLine();
+        System.out.print("=> 정말로 삭제하실래요(y/n)");
+        String answer = keyboard.next();
+        if(answer.equalsIgnoreCase("y")){
+            list.remove((int)idlist.get(id-1));
+            System.out.println("단어가 삭제되었습니다. ");
+        }else
+            System.out.println("취소되었습니다.");
+    }
 
     public void loadFile(){
         try{

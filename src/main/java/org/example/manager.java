@@ -43,6 +43,7 @@ public class manager {
                 wordCRUD.update();
             }
             else if(menu == 6){
+                wordCRUD.deleteWord();
             }
             else if(menu == 7){
                 wordCRUD.saveFile();
