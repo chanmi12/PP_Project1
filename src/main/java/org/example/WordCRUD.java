@@ -40,8 +40,19 @@ public class WordCRUD implements ICRUD{
 
     @Override
     public void selectOne(int id) {
+    }
+
+    public void levelList(){
+        System.out.print("=> 레벨(1:초급, 2:중급, 3:고급) 선택 : ");
+        int level = keyboard.nextInt();
+        listAll(level);
 
     }
+
+    public void searchWord(){
+
+    }
+
 
     public void listAll(){
         System.out.println("--------------------------------");
@@ -67,6 +78,18 @@ public class WordCRUD implements ICRUD{
         System.out.println("--------------------------------");
         return idlist;
     }
+    public void listAll(int level){
+        int j = 0;
+        System.out.println("--------------------------------");
+        for(int i = 0; i < list.size(); i++){
+            int ilevel = list.get(i).getLevel();
+            if(ilevel != level) continue;
+            System.out.print((j+1)+ " ");
+            System.out.println(list.get(i).toString());
+            j++;
+        }
+        System.out.println("--------------------------------");
+    }
 
     public void update(){
         System.out.print("=> 수정할 단어 검색: ");
@@ -74,11 +97,12 @@ public class WordCRUD implements ICRUD{
         ArrayList<Integer> idlist = this.listAll(keyword);
         System.out.print("=> 수정할 번호 선택 :");
         int id = keyboard.nextInt();
+        keyboard.nextLine();
         System.out.print("=> 뜻 입력 :");
         String mean = keyboard.nextLine();
         Word word = list.get(idlist.get(id-1));
         word.setMean(mean);
-        System.out.println("단어가 수정되없습니다.");
+        System.out.println("단어가 수정되었습니다.");
     }
     public void deleteWord(){
         System.out.print("=> 삭제할 단어 검색: ");
