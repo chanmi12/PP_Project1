@@ -63,7 +63,7 @@
 
 ### 👋프로그램을 나가는 기능
  <div align="center">
-     <img src = "https://github.com/chanmi12/PP_Project1/blob/master/screenshot/CRUD%207%EB%B2%88%20%EB%A9%94%EB%89%B4.jpg?raw=true">
+     <img src = "https://github.com/chanmi12/PP_Project1/blob/master/screenshot/CRUD%200%EB%B2%88%20%EB%A9%94%EB%89%B4.jpg?raw=true">
   </div>
      </html>
 
